@@ -1,0 +1,14 @@
+C:\Users\LOQ\OneDrive\Desktop\.net course\513\task\task\obj\Debug\net9.0\task.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\LOQ\OneDrive\Desktop\.net course\513\task\task\obj\Debug\net9.0\task.AssemblyInfoInputs.cache
+C:\Users\LOQ\OneDrive\Desktop\.net course\513\task\task\obj\Debug\net9.0\task.AssemblyInfo.cs
+C:\Users\LOQ\OneDrive\Desktop\.net course\513\task\task\obj\Debug\net9.0\task.csproj.CoreCompileInputs.cache
+C:\Users\LOQ\OneDrive\Desktop\.net course\513\task\task\bin\Debug\net9.0\task.exe
+C:\Users\LOQ\OneDrive\Desktop\.net course\513\task\task\bin\Debug\net9.0\task.deps.json
+C:\Users\LOQ\OneDrive\Desktop\.net course\513\task\task\bin\Debug\net9.0\task.runtimeconfig.json
+C:\Users\LOQ\OneDrive\Desktop\.net course\513\task\task\bin\Debug\net9.0\task.dll
+C:\Users\LOQ\OneDrive\Desktop\.net course\513\task\task\bin\Debug\net9.0\task.pdb
+C:\Users\LOQ\OneDrive\Desktop\.net course\513\task\task\obj\Debug\net9.0\task.dll
+C:\Users\LOQ\OneDrive\Desktop\.net course\513\task\task\obj\Debug\net9.0\refint\task.dll
+C:\Users\LOQ\OneDrive\Desktop\.net course\513\task\task\obj\Debug\net9.0\task.pdb
+C:\Users\LOQ\OneDrive\Desktop\.net course\513\task\task\obj\Debug\net9.0\task.genruntimeconfig.cache
+C:\Users\LOQ\OneDrive\Desktop\.net course\513\task\task\obj\Debug\net9.0\ref\task.dll
