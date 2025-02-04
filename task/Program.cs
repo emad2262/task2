@@ -1,9 +1,12 @@
-﻿
+
+
+using System.Transactions;
 
 namespace task
 {
     class Book
     {
+        internal bool avalibality;
 
         string Author { get; set; }
         string Title { get; set; }
@@ -13,7 +16,7 @@ namespace task
         
 
         
-        public Book(string title = "none", string author = "none", string isbn = "none", bool avalibality = true)
+        public Book(string title , string author  , string isbn , bool avalibality )
         {
 
             Author = author;
@@ -22,55 +25,68 @@ namespace task
             Avalibality = avalibality;
             
         }
+
+        public Book(string title, string author, string isbn)
+        {
+            Title = title;
+            Author = author;
+            Isbn = isbn;
+        }
     }
 
     class Library
     {
         public List<Book> Books { get; set; }
 
-        public bool AddBook()
+        public Library()
         {
-            Books.Add(new Book("The Great Gatsby", "F. Scott Fitzgerald", "9780743273565"));
-            Books.Add(new Book("To Kill a Mockingbird", "Harper Lee", "9780061120084"));
-            Books.Add(new Book("1984", "George Orwell", "9780451524935"));
-            return true;
-        }
-        public bool Searchbook(string title)
-        {
-            for (int i = 0; i < Books.Count; i++)
-            {
-                if ("The Great Gatsby" == title)
-                {
-                    Console.WriteLine("is here");
-                }
-                else if ("To Kill a Mockingbird" == title)
-                {
-                    Console.WriteLine("is borrowd");
-                }
-                else
-                {
-                    Console.WriteLine("this is not at the library ");
-                }
-            } return true;
+            Books = new List<Book>();
         }
 
+        public void AddBook(string title, string author, string isbn)
+        {
+
+            Books.Add(new Book(title, author, isbn));
+        }
+
+        public string SearchBook(string title1, string title2, string title3) 
+        {
+            Books.Add(new Book(title1, title2, title3));
+            for (int i = 0; i < Books.Count; i++) {
+                
+            }
+
+        }
+        public void BorrowBook(string title)
+        {
+            Book book = SearchBook(title);
+            if (book != null)
+            {
+                if (book.avalibality)
+                    Console.WriteLine($"{title} is borrow");
+                else
+                    Console.WriteLine($"{title} is not herer");
+            }
+           
+        }
     }
 
     internal class Program
     {
         static void Main(string[] args)
         {
-
-
+            Library library = new Library();
             // Adding books to the library
-            
+            library.AddBook(new Book("The Great Gatsby", "F. Scott Fitzgerald", "9780743273565"));
+            library.AddBook(new Book("To Kill a Mockingbird", "Harper Lee", "9780061120084"));
+            library.AddBook(new Book("1984", "George Orwell", "9780451524935"));
 
-            // Searching 
-            Book book = new Book("The Great Gatsby", "To Kill a Mockingbird", "1984");
-            
-            // Returning books
-            
-            
+            // Searching
+            library.SearchBook("The Great Gatsby", "To Kill a Mockingbird", "1984");
+
+            // borrow books
+            library.BorrowBook("The Great Gatsby");
+
 
             Console.ReadLine();
 
