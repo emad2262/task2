@@ -49,12 +49,18 @@ namespace task
             Books.Add(new Book(title, author, isbn));
         }
 
-        public string SearchBook(string title1, string title2, string title3) 
-        {
-            Books.Add(new Book(title1, title2, title3));
-            for (int i = 0; i < Books.Count; i++) {
-                
-            }
+         public string SearchBook(string title)
+         {
+             for (int i = 0; i < Books.Count; i++)
+             {
+                 if (GetTitle(i).Equals(title, StringComparison.OrdinalIgnoreCase))
+                 {
+                     return ($"{title} is in the library but its borrowed in this time");
+                 }
+             }
+        
+         }
+
 
         }
         public void BorrowBook(string title)
@@ -82,7 +88,7 @@ namespace task
             library.AddBook(new Book("1984", "George Orwell", "9780451524935"));
 
             // Searching
-            library.SearchBook("The Great Gatsby", "To Kill a Mockingbird", "1984");
+            library.SearchBook(" "1984");
 
             // borrow books
             library.BorrowBook("The Great Gatsby");
